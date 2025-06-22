@@ -1,5 +1,6 @@
 pipeline {
     agent any 
+
     stages{
         stage('Dev'){
             steps{
@@ -11,9 +12,10 @@ pipeline {
                 echo 'this is test stage'
             }
         }
-        stage('deploy')
+        stage('deploy'){
             steps{
                 echo 'thic is deploy stage'
             }
+        }
     }
 }
