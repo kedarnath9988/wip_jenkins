@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     options{
-        timeout(time: 30, unit: 'minutes')
+        timeout(time: 30, unit: 'MINUTES')
         disableConcurrentBuilds()
     }
 
