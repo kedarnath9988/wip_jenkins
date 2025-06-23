@@ -1,25 +1,20 @@
 pipeline {
     agent any
-    options{
-        timeout(time: 30, unit: 'MINUTES')
-        disableConcurrentBuilds()
-    }
 
-    stages{
-        stage('Dev'){
-            steps{
-                echo 'this is dev stage'
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
             }
         }
-        stage('test'){
-            steps{
-                echo 'this is test stage'
-                 
+        stage('Test') {
+            steps {
+                echo 'Testing..'
             }
         }
-        stage('deploy'){
-            steps{
-                echo 'thic is deploy stage'
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
