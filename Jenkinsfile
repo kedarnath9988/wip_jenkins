@@ -49,12 +49,12 @@ pipeline {
                 echo "Choice: ${params.CHOICE}"
                 echo "Password: ${params.PASSWORD}"
            }
-
     }
     }
     post { 
         always { 
             echo 'I will always say Hello again!'
+            deleteDir()
         }
         success {
             echo 'I pipeline is always success'
