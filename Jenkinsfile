@@ -7,7 +7,7 @@ pipeline {
         disableConcurrentBuilds()
     }
     parameters {
-        string(name: 'kEDARNATH', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        string(name: 'person', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
         text(name: 'BIOGRAPHY', defaultValue: 'DevOps with AWS ', description: 'Enter some information about the person')
 
@@ -35,9 +35,7 @@ pipeline {
                  sh 'echo this Deploy stage............... '
             }
         }
-    }
-    stage('Example') {
-            steps {
+    }    stage('print params'){
                 echo "Hello ${params.PERSON}"
 
                 echo "Biography: ${params.BIOGRAPHY}"
@@ -47,7 +45,7 @@ pipeline {
                 echo "Choice: ${params.CHOICE}"
 
                 echo "Password: ${params.PASSWORD}"
-            }
-        }
+
+    }
 }
 
