@@ -51,6 +51,17 @@ pipeline {
            }
 
     }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        success {
+            echo 'I pipeline is always success'
+        }
+        failure {
+            echo ' Hi pipeline failure '
+        }
+    }
     }
 }
 
