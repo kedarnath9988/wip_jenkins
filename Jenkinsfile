@@ -27,7 +27,7 @@ pipeline {
         stage('Test') {
             steps {
                  sh 'echo this Test stage '
-                 sh 'echo "trigger test '
+                 sh 'echo trigger test'
                  sleep 10 
             }
         }
